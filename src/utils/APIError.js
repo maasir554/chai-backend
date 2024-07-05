@@ -13,9 +13,9 @@ class APIError extends Error {
         this.errors = errors;
 
         if (stack) {
-            this.stack = stack; // stack provides path to the full erro, where it originated, etc.
+            this.stack = stack; // stack provides path to the full error, where it originated, etc.
         } else {
-            Error.captureStackTrace(this, this.constructor); // for tracing the full error
+            Error.captureStackTrace(this, this.constructor); // to start tracing the error from here {Creates the `stack` property}
         }
     }
 }
